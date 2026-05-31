@@ -1,0 +1,102 @@
+[
+    {
+        "review": "nice ending",
+        "prediction": "positive",
+        "date": "2026-05-24 22:44:33"
+    },
+    {
+        "review": "bad choice of actors",
+        "prediction": "positive",
+        "date": "2026-05-24 23:02:15"
+    },
+    {
+        "review": "awful ending",
+        "prediction": "negative",
+        "date": "2026-05-24 23:02:33"
+    },
+    {
+        "review": "this movie was so interesting",
+        "prediction": "negative",
+        "date": "2026-05-25 11:46:33"
+    },
+    {
+        "review": "this movie was interesting",
+        "prediction": "negative",
+        "date": "2026-05-25 11:46:50"
+    },
+    {
+        "review": "great ending",
+        "prediction": "positive",
+        "date": "2026-05-25 11:47:15"
+    },
+    {
+        "review": "awful ending",
+        "prediction": "negative",
+        "date": "2026-05-25 11:47:28"
+    },
+    {
+        "review": "the movie was so slow and dull",
+        "prediction": "negative",
+        "date": "2026-05-25 11:49:46"
+    },
+    {
+        "review": "interesting movie",
+        "prediction": "negative",
+        "date": "2026-05-26 12:03:32"
+    },
+    {
+        "review": "nice movie",
+        "prediction": "negative",
+        "date": "2026-05-26 12:29:26"
+    },
+    {
+        "review": "bad ending",
+        "prediction": "positive",
+        "date": "2026-05-26 12:29:43"
+    },
+    {
+        "review": "terrible movie\n",
+        "prediction": "negative",
+        "date": "2026-05-26 12:30:21"
+    },
+    {
+        "review": "terrible movie\n",
+        "prediction": "negative",
+        "date": "2026-05-26 12:30:24"
+    },
+    {
+        "review": "sorrowful ending\n",
+        "prediction": "positive",
+        "date": "2026-05-26 12:31:35"
+    },
+    {
+        "review": "sorrowful beginning\n",
+        "prediction": "positive",
+        "date": "2026-05-26 12:31:52"
+    },
+    {
+        "review": "sorrowful beginning\n",
+        "prediction": "positive",
+        "date": "2026-05-26 12:31:55"
+    },
+    {
+        "review": "Amazing movie with fantastic acting",
+        "prediction": "positive",
+        "date": "2026-05-26 12:33:51"
+    },
+    {
+        "review": "Terrible movie and boring plot",
+        "prediction": "negative",
+        "date": "2026-05-26 12:34:31"
+    },
+    {
+        "review": "nice movie",
+        "prediction": "negative",
+        "date": "2026-05-26 14:34:15"
+    },
+    {
+        "review": "the ending was awful",
+        "prediction": "negative",
+        "date": "2026-05-26 14:35:43"
+    }
+]

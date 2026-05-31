@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Sentiment Analyzer</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+     <link rel="stylesheet" href="../static/style.css">
+      <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+
+ <header class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <a href="/" class="logo-link">
+
+                <img src="../static/image/logo.png"
+                     alt="Movie Review Logo"
+                     class="logo-img">
+
+            </a>
+
+            <div class="logo-text" style="margin-left: 10px;" >
+
+                <h1>
+                    Movie <span>Review</span>
+                    <p>   SENTIMENT SYSTEM </p>
+                </h1> 
+
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="/" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#predict">
+                        Recommended Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+<div class="container">
+
+    <h1>Movie Review Sentiment System</h1>
+
+    <textarea id="reviewInput"
+              placeholder="Enter your movie review..."></textarea>
+
+    <button onclick="analyzeSentiment()">
+        Analyze Sentiment
+    </button>
+
+    <div id="result"></div>
+
+    <h2>Review History</h2>
+
+    <button onclick="loadHistory()">
+        Load History
+    </button>
+
+    <div id="history"></div>
+
+</div>
+    <section id="predict">
+    <fieldset id="predict">
+        <legend >Recommended Movies</legend>
+        <div class="movies" id="movies">
+        <!-- movie1 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/aladdin.jpeg" alt="movie 1">
+            <div class="popup">Drama, Advanture & Comedy</div>
+            </div>
+            <div class="movie-name">Aladdin</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/channel/UC14rsbDvXU3eOnSXBYqEiiA?ysclid=mpjtpi1sw2664219312', '_blank')">Watch Now</button>
+        </div>
+  <!-- movie2 -->
+
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/avater1.jpeg" alt="movie 1">
+            <div class="popup">sci-fi, Thriller and Action</div>
+            </div>
+            <div class="movie-name">Avatar</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/watch?v=8QLYI_g9HVU&ysclid=mpjtxj83ez244069439', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie3 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/avengers.jpeg" alt="movie 1">
+            <div class="popup">sci-fi,thriller and Action</div>
+            </div>
+            <div class="movie-name">Avengers</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/channel/UC-EFTLnEU5_Juw5sHcxhzFQ?ysclid=mpjsv2376g336738543', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie4 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/blue beetle.jpeg" alt="movie 1">
+            <div class="popup">sci-fi, Action</div>
+            </div>
+            <div class="movie-name">Blue Beetle</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/channel/UCSiqE9sQahD-g_2KEhQqUcQ?ysclid=mpju0ds0sx278841163', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie5 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/every last of them.jpeg" alt="movie 1">
+            <div class="popup">Action</div>
+            </div>
+            <div class="movie-name">Ever Last One Of Them</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/watch?v=DVvDBKLcZ8k&ysclid=mpju2b8at5435761360', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie6 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/extraction.jpeg" alt="movie 1">
+            <div class="popup">Action</div>
+            </div>
+            <div class="movie-name">Extraction 3</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/watch?v=ICBx1Sm85Ww&ysclid=mpju3b68ju185739732', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie7 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/john wick.jpeg" alt="movie 1">
+            <div class="popup">sci-fi, Action</div>
+            </div>
+            <div class="movie-name">John Wick</div>
+            <button class="watch-btn" onclick="window.open('https://vkvideo.ru/video-220018529_456239400', '_blank')">Watch Now</button>
+        </div>
+
+              <!-- movie8 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/running man.jpeg" alt="movie 1">
+            <div class="popup">Adventure, Drama and Action</div>
+            </div>
+            <div class="movie-name">The Running Man</div>
+           <button class="watch-btn" onclick="window.open('https://vimeo.com/24166313?ysclid=mpju7kihp841530625', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie9 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/shooter.jpeg" alt="movie 1">
+            <div class="popup">Action</div>
+            </div>
+            <div class="movie-name">Shooter 2</div>
+           <button class="watch-btn" onclick="window.open('https://movie.icestech.info/shooter-2-2025/', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie10 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/spiderman.jpeg" alt="movie 1">
+            <div class="popup">sci-fi</div>
+            </div>
+            <div class="movie-name">Spider-Man</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/playlist?list=PL8e_2TUqHzuoV7ovI8CVvaGWlZE2RC8O0&ysclid=mpjua95u7b894224287', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie11 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/the great wall.jpeg" alt="movie 1">
+            <div class="popup">Action</div>
+            </div>
+            <div class="movie-name">The Great Wall Of China</div>
+            <button class="watch-btn" onclick="window.open('https://www.youtube.com/watch?v=l02kogV-IRI&ysclid=mpjubqsm6o647348834', '_blank')">Watch Now</button>
+        </div>
+
+          <!-- movie12 -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="../static/image/star wars.jpeg" alt="movie 1">
+            <div class="popup">sci-fi</div>
+            </div>
+            <div class="movie-name">Star War</div>
+           <button class="watch-btn" onclick="window.open('https://www.youtube.com/watch?v=sGbxmsDFVnE&ysclid=mpjudqwm4v238503203', '_blank')">Watch Now</button>
+        </div>
+
+        </div>
+    </fieldset>
+    </section>
+
+
+<script src="../static/script.js"></script>
+
+<footer style="margin-top: 0.8rem;">
+    <p style="font-size: small;">@ AI Group 14 Movie Review. All Right reserved.</p>
+</footer>
+
+</body>
+</html>
